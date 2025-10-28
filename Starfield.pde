@@ -1,5 +1,3 @@
-PImage img;
-
 class smoke {
   double pSize, pSpeed, pAngle, pX, pY, pDisplace;
   int pColor;
@@ -69,7 +67,6 @@ smoke [] particles = new smoke[50];
 
 void setup(){
   background(0);
-  img = loadImage("fire-Picsart-BackgroundRemover.png");
   size(500, 500);
   for(int i = 0; i < particles.length - 5; i ++){
     particles[i] = new smoke();
@@ -85,7 +82,8 @@ void draw(){
     particles[i].show();
     particles[i].move();
   }
-  image(img, 175, 175, 150, 150);
+  fill(255, 0, 0);
+  ellipse(250, 250, 75, 75);
 }
 
 
